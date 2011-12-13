@@ -1,3 +1,8 @@
+if RUBY_VERSION =~ /1.9/
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
@@ -42,7 +47,6 @@ end
 
 
 group :production do
-  export en_US.UTF-8
   # Pretty printed test output
   gem 'pg'
   gem 'therubyracer-heroku'
