@@ -42,6 +42,7 @@ end
 
 
 group :production do
+  export en_US.UTF-8
   # Pretty printed test output
   gem 'pg'
   gem 'therubyracer-heroku'
